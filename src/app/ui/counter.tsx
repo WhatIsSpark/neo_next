@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export default async function Counter() {
+export default function Counter() {
   const [count, setCount] = useState(0);
   const countUp = () => {
     setCount(count + 1);

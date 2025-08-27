@@ -1,13 +1,15 @@
-export default function loginHander(req, res) {
+import { NextRequest, NextResponse } from "next/server";
+
+export default async function loginHander(req:NextRequest, res:NextResponse) {
   if(req){
     console.log(req);
     
   }
-  res.status(200).json({
+  return NextResponse.json({
     code: 0,
     msg: "登录成功",
     data: {
       token: "123456",
     },
-  });
+  })
 }
